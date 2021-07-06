@@ -1,0 +1,7 @@
+services:
+    my.api.resource.my_resource:
+        class: Nb\ContaoApiEventsBundle\ApiResource\MyResource
+        arguments:
+            - "my_resource"
+        tags:
+            - { name: huh.api.resource, alias: my_resource}

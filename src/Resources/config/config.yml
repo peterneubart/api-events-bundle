@@ -1,0 +1,4 @@
+huh:
+    api:
+        resources:
+            - {name: my_resource, type: entity_resource, modelClass: "\\Contao\\CalendarEventsModel", verboseName: my_resource}
