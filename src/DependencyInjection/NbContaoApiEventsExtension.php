@@ -17,19 +17,14 @@ class NbContaoApiEventsExtension extends Extension
      */
     public function getAlias()
     {
-        return 'huh_api';
+        return 'nb_api';
     }
 
     /**
      * {@inheritdoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
-        $configuration = new Configuration($container->getParameter('kernel.debug'));
-        $processedConfig = $this->processConfiguration($configuration, $configs);
-
-        $container->setParameter('huh.api', $processedConfig);
-
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
         $loader->load('services.yml');
